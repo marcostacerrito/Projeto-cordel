@@ -1,0 +1,96 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2? family= Assistant:wght@700 & família= Paixão+Um:wght@700 & display=swap');
+@import url('https://fonts.googleapis.com/css2? family= Assistant:wght@700 &família = Sriracha & display=swap');
+
+:root {
+    --fonte1:Verdana, Geneva, Tahoma, sans-serif; /* vai ficar no cabeçalho e rodapé*/
+    --fonte2:'Passion One', cursiva;   /* vai ser para titulos*/ 
+    --fonte3:'Sriracha', cursive;   /* vai ser para o conteúdo*/
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    
+}
+
+html,body {
+    min-height: 100vh;
+    background-color: darkgray;
+    font-family: var(--fonte1);
+}
+
+header {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+header > h1 {
+    padding-top: 50px;
+    font-variant: small-caps;
+    font-family: var(--fonte2);
+    font-size: 10vw; /*Aqui estou uando 10% da largura da tela (vw) para diminuir a letra e aumentar automaticamente quando tiver que usar na tela de celular*/
+}
+header > p {
+    padding-bottom: 50px;
+}
+header a, footer a {
+    color:white;
+    text-decoration: none;
+    font-weight: bolder;
+}
+header a:hover, footer a:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding-top: 10vh;
+    padding-bottom: 10vh;   
+    line-height: 2em;
+    padding-left: 30px;
+    font-family: var(--fonte3);
+    font-size: 3.5vw;
+}
+
+section > p {
+    padding-bottom: 2em;
+}
+
+section.normal {
+    background-color: white;
+    color: black;
+
+}
+section.imagem {
+    background-color: rgb(199, 173, 173) ;
+    color: white;
+    box-shadow: inset 6px 6px 13px black; /*serve para dar sombra por dentro na imagem*/
+    background-attachment: fixed; /*a imagem fica fixa e ao rolar a pagina, as letras cruzam por cima dela */
+}
+section.imagem > p {
+    display: inline-block; /*Serve para deixar a caixa de letras no tamanho exato do conteúdo*/
+    padding: 5px;
+    background-color: transparent;
+    text-shadow: 1px 1px 0px black; 
+
+}
+section#img01 {
+    background-image: url('../imagens/background001.jpg');
+    background-position: right center; /* serve para alinhar a imagem de fundo a direita e centralizada*/
+    background-size: cover; /*diminue a imagem e fica maiss organizada*/
+}
+section#img02 {
+    background-image: url('../imagens/background002.jpg');
+    background-size: cover; /*diminue a imagem e fica maiss organizada*/
+}
+
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-family: var(--fonte2);
+}
